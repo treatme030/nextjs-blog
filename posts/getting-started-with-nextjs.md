@@ -6,6 +6,6 @@ excerpt: 'NextJS is a the React framework for production - it building fullstack
 isFeatured: true
 ---
 
-# This is a title
+# Next.js란...
 
 This is some regular text with a [link](https://google.com)
