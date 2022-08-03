@@ -51,7 +51,7 @@ const ContactForm = () => {
 
     setRequestStatus('pending');
     try {
-      sendContactData(contactInfo);
+      await sendContactData(contactInfo);
       setRequestStatus('success');
       setContactInfo({
         email: '',
