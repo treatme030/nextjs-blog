@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom';
 import classes from './notification.module.css';
 
 const Notification = ({ notification }) => {
@@ -15,11 +16,13 @@ const Notification = ({ notification }) => {
 
   const cssClasses = `${classes.notification} ${statusClasses}`;
 
-  return (
+  //ReactDOM.createPortal(요소, 문자열 또는 조각과 같이 렌더링하려는 구성 요소, DOM 계층 외부에 있는 DOM 노드로 portal이 삽입될 상위 구성요소);
+  return ReactDOM.createPortal(
     <div className={cssClasses}>
       <h2>{title}</h2>
       <p>{message}</p>
-    </div>
+    </div>,
+    document.getElementById('notifications')
   );
 };
 
